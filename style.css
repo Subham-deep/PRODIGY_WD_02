@@ -1,0 +1,283 @@
+body {
+    margin-top: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Stopwatch_background.jpg);
+    
+}
+
+.contant {
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    flex: 1;
+    gap: 200px;
+}
+
+.section1 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 300px;
+
+}
+
+.clock {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #2b2b55, #0d0d2b);
+    border: 8px solid #85d1218d;
+    position: relative;
+    box-shadow: 0 0 40px rgba(255, 17, 0, 0.544), inset 0 0 30px rgba(0, 0, 0, 0.6);
+    margin: 0 auto 25px;
+}
+
+.number {
+    color: whitesmoke;
+    position: absolute;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.n12 {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.n3 {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.n6 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.n9 {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hour {
+    width: 7px;
+    height: 70px;
+    background: white;
+}
+
+.minute {
+    width: 4px;
+    height: 100px;
+    background: white;
+}
+
+.second {
+    width: 2px;
+    height: 120px;
+    background: red;
+}
+
+.hour,
+.minute,
+.second {
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    transition: transform 0.05s linear;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+}
+
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ffd700;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+button {
+    margin-top: 30px !important;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: beige !important;
+    color: black !important;
+    ;
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(225, 225, 225, 0.653);
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 50px;
+    color: aliceblue;
+    align-items: center;
+    width: 400px;
+    border: 1px solid rgb(232, 228, 236);
+}
+
+#start {
+    background: #525257;
+    color: #fff;
+}
+
+#stop {
+    background: #525257;
+    color: #fff;
+}
+
+#reset {
+    background: #525257;
+    color: #fff;
+}
+
+#lap {
+    background: #525257;
+    color: #fff;
+}
+
+.section2 {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 25px;
+    color: #fff;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    font-size: 30px;
+    color: #fff;
+    gap: 7px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .contant {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        height: auto;
+    }
+
+    .section1 {
+        margin: 0;
+    }
+
+    .section2 {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .clock {
+        width: 220px;
+        height: 220px;
+    }
+
+    .number {
+        font-size: 28px;
+    }
+
+    .hour { height: 50px; }
+    .minute { height: 70px; }
+    .second { height: 85px; }
+
+    #display {
+        width: 90%;
+        font-size: 36px;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    li {
+        font-size: 22px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+       body {
+    margin-top:250px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+#display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 50px;
+    color: aliceblue;
+    align-items: center;
+    width: 200px;
+    
+  
+}
+    .clock {
+        width: 180px;
+        height: 180px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    #display {
+        font-size: 28px;
+     }
+    ul{margin-bottom: 10px;
+        max-height: 100px;
+    overflow-y: auto;
+    }
+}
